@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import source from '../image/image.jpg' 
+import sourceOther from '../image/image1.jpg' 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,10 +29,10 @@ export default function Home() {
                   </svg>
                 </div>
               </button>
-              <img  className="mt-8"></img>
+              <img src={source.src} className="mt-8"></img>
             </div>
             <div className="">
-              <img  className="w-full h-screen"></img>
+              <img src={sourceOther.src} className="w-full h-screen"></img>
               <h2 className="text-sm tracking-tight text-gray-900 sm:text-4xl">At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</h2>
               <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4'>
                 <div className='flex'>
