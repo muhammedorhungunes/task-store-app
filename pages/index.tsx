@@ -19,29 +19,31 @@ export default function Home() {
       <main>
         <div className="bg-white">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-            <div className='max-w-sm mb-32'>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Smarten up your work look or throw on a blazer with jeans for the weekend</h2>
-              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4'>
+            <div className='max-w-lg mb-32'>
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8 ml-8" style={{fontFamily: 'Avenir' }}>Smarten up your work look or throw on a blazer with jeans for the weekend</h2>
+              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 m-8'>
                 <div className='flex'>
-                  <p>Shop Now </p>
+                  <p style={{fontFamily: 'Avenir' }}>Shop Now </p>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 </div>
               </button>
-              <img src={source.src} className="mt-8"></img>
+              <div className="mt-8 w-[32rem]">
+                <img src={source.src} ></img>
+              </div>
             </div>
-            <div className="">
-              <img src={sourceOther.src} className="w-full h-screen"></img>
-              <h2 className="text-sm tracking-tight text-gray-900 sm:text-4xl">At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</h2>
-              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4'>
-                <div className='flex'>
-                  <p>Shop Now </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
+            <div className="mb-48">
+              <div className='w-full h-[44rem]'>
+                <img src={sourceOther.src} className="w-full h-full" >
+                </img>
+              </div>
+              <div>
+                <div className='m-16'>
+                  <h2 className="text-lg tracking-tight text-gray-900 sm:text-lg w-full sm:w-full" style={{fontFamily: 'Avenir' }}>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</h2>
+                  <p className='underline underline-offset-8 mt-16 cursor-pointer'>Read More </p>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
