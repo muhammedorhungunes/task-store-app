@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
 import source from '../image/image.jpg' 
 import sourceOther from '../image/image1.jpg' 
 
@@ -17,34 +15,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="bg-white">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-            <div className='max-w-lg mb-32'>
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8 ml-8" style={{fontFamily: 'Avenir' }}>Smarten up your work look or throw on a blazer with jeans for the weekend</h2>
-              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 m-8'>
-                <div className='flex'>
-                  <p style={{fontFamily: 'Avenir' }}>Shop Now </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
+        <div className='flex flex-row max-w-lg ml-16 mt-16'>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8 ml-8" style={{fontFamily: 'Avenir' }}>Smarten up your work look or throw on a blazer with jeans for the weekend</h2>
+        </div>
+        <div className='flex flex-row ml-16'>
+          <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 m-8'>
+            <div className='flex'>
+              <p style={{fontFamily: 'Avenir' }}>Shop Now </p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </div>
+          </button> 
+        </div>
+        <div className='flex flex-row lg:w-full lg:h-screen ml-16'>
+          <img src={source.src} ></img>
+          <img src={sourceOther.src} className="ml-20 w-2/5 lg:absolute lg:top-10 lg:w-2/5 lg:right-16 lg:h-full "></img>
+          <div className="lg:w-1/2 relative w-1/2 right-3/4 lg:left-64 ">
+            <div className="flex justify-center absolute top-3/4 w-3/5 lg:absolute  lg:top-1/2 lg:w-3/5">
+              <div className="flex flex-col h-20 rounded-lg bg-white shadow-lg lg:flex-row lg:w-3/4">
+                <div className="hidden lg:p-6 lg:flex lg:flex-col lg:justify-start">
+                  <h5 className="text-gray-900 text-sm font-medium ">Saffiano Leather Bag 2005</h5>
+                  <p className="text-gray-600 text-xs">€ 199.95</p>
                 </div>
-              </button>
-              <div className="mt-8 w-[32rem]">
-                <img src={source.src} ></img>
+                <img className="w-full h-20 p-2 mr-16 object-cover lg:w-16 lg:h-20 lg:m-0" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
               </div>
             </div>
-            <div className="mb-48">
-              <div className='w-full h-[44rem]'>
-                <img src={sourceOther.src} className="w-full h-full" >
-                </img>
-              </div>
-              <div>
-                <div className='m-16'>
-                  <h2 className="text-lg tracking-tight text-gray-900 sm:text-lg w-full sm:w-full" style={{fontFamily: 'Avenir' }}>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</h2>
-                  <p className='underline underline-offset-8 mt-16 cursor-pointer'>Read More </p>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className='float-right lg:w-2/5 h-64 m-16 lg:absolute lg:top-full lg:w-2/5 lg:right-1 lg:h-5/6'>
+          <div className='flex flex-row'>
+            <h2 className="text-lg tracking-tight text-gray-900" style={{fontFamily: 'Avenir' }}>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</h2>
+          </div>
+          <div className='flex flex-row'>
+            <p className='underline underline-offset-8 cursor-pointer mt-8' style={{fontFamily: 'Avenir' }}>Read More </p>
           </div>
         </div>
       </main>
